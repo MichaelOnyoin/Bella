@@ -1,0 +1,45 @@
+{
+  "id": "bb8680cd-34d4-4ade-b8f7-3d4b18414bf2",
+  "name": "BELLA_ASL_Add-ons",
+  "publisher": "ADROIT SOLUTIONS LIMITED",
+  "version": "1.0.0.0",
+  "brief": "",
+  "description": "Additional Customizations to boost improve Bellazuri's system user experience.",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": 
+  [
+    {
+      "id": "53f5ca38-a9dc-4297-963d-cc5bc9a1b663",
+      "name": "URA_EFRIS_Integration",      
+      "publisher": "Adroit Solutions Ltd.",
+      "version": "18.0.0.0"
+    },
+    {
+      "id": "7a20bbee-481a-4349-9162-ffcd9fe88268",
+      "name": "JsonHttp",      
+      "publisher": "Adroit Solutions Ltd",
+      "version": "1.0.0.0"
+    },
+    {
+      "id": "564c0929-467b-45dc-a12d-3259d3e0126c",
+      "name": "Adroit POS",
+      "publisher": "Adroit Solutions Limited",
+      "version": "1.0.0.0"
+    }
+  ],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "18.0.0.0",
+  "idRanges": [
+    {
+      "from": 50000,
+      "to": 50199
+    }
+  ],
+  "showMyCode": false,
+  "runtime": "7.0"
+}

@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="WeekStartDate">
+          <DataField>WeekStartDate</DataField>
+        </Field>
+        <Field Name="DayDate">
+          <DataField>DayDate</DataField>
+        </Field>
+        <Field Name="DayNo">
+          <DataField>DayNo</DataField>
+        </Field>
+        <Field Name="DomesticInvoicesNet">
+          <DataField>DomesticInvoicesNet</DataField>
+        </Field>
+        <Field Name="DomesticInvoicesNetFormat">
+          <DataField>DomesticInvoicesNetFormat</DataField>
+        </Field>
+        <Field Name="CashReceivedDomestic">
+          <DataField>CashReceivedDomestic</DataField>
+        </Field>
+        <Field Name="CashReceivedDomesticFormat">
+          <DataField>CashReceivedDomesticFormat</DataField>
+        </Field>
+        <Field Name="OutstandingDomestic">
+          <DataField>OutstandingDomestic</DataField>
+        </Field>
+        <Field Name="OutstandingDomesticFormat">
+          <DataField>OutstandingDomesticFormat</DataField>
+        </Field>
+        <Field Name="POInvoices">
+          <DataField>POInvoices</DataField>
+        </Field>
+        <Field Name="POInvoicesFormat">
+          <DataField>POInvoicesFormat</DataField>
+        </Field>
+        <Field Name="Requisitions">
+          <DataField>Requisitions</DataField>
+        </Field>
+        <Field Name="RequisitionsFormat">
+          <DataField>RequisitionsFormat</DataField>
+        </Field>
+        <Field Name="Payments">
+          <DataField>Payments</DataField>
+        </Field>
+        <Field Name="PaymentsFormat">
+          <DataField>PaymentsFormat</DataField>
+        </Field>
+        <Field Name="OutstandingVendor">
+          <DataField>OutstandingVendor</DataField>
+        </Field>
+        <Field Name="OutstandingVendorFormat">
+          <DataField>OutstandingVendorFormat</DataField>
+        </Field>
+        <Field Name="PettyCashPayments">
+          <DataField>PettyCashPayments</DataField>
+        </Field>
+        <Field Name="PettyCashPaymentsFormat">
+          <DataField>PettyCashPaymentsFormat</DataField>
+        </Field>
+        <Field Name="ReportTitle">
+          <DataField>ReportTitle</DataField>
+        </Field>
+        <Field Name="CompanyName">
+          <DataField>CompanyName</DataField>
+        </Field>
+        <Field Name="WeekRangeText">
+          <DataField>WeekRangeText</DataField>
+        </Field>
+        <Field Name="PrintedBy">
+          <DataField>PrintedBy</DataField>
+        </Field>
+        <Field Name="PrintDateTime">
+          <DataField>PrintDateTime</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

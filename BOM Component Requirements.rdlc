@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Item_No">
+          <DataField>Item_No</DataField>
+        </Field>
+        <Field Name="Item_Description">
+          <DataField>Item_Description</DataField>
+        </Field>
+        <Field Name="Item_BaseUOM">
+          <DataField>Item_BaseUOM</DataField>
+        </Field>
+        <Field Name="Company_Name">
+          <DataField>Company_Name</DataField>
+        </Field>
+        <Field Name="Company_Address">
+          <DataField>Company_Address</DataField>
+        </Field>
+        <Field Name="Company_Picture">
+          <DataField>Company_Picture</DataField>
+        </Field>
+        <Field Name="Company_Email">
+          <DataField>Company_Email</DataField>
+        </Field>
+        <Field Name="Company_PhoneNo">
+          <DataField>Company_PhoneNo</DataField>
+        </Field>
+        <Field Name="PrintDate">
+          <DataField>PrintDate</DataField>
+        </Field>
+        <Field Name="ItemSalesTarget">
+          <DataField>ItemSalesTarget</DataField>
+        </Field>
+        <Field Name="ItemSalesTargetFormat">
+          <DataField>ItemSalesTargetFormat</DataField>
+        </Field>
+        <Field Name="NewPagePerItem">
+          <DataField>NewPagePerItem</DataField>
+        </Field>
+        <Field Name="Raw_Level">
+          <DataField>Raw_Level</DataField>
+        </Field>
+        <Field Name="Raw_ComponentNo">
+          <DataField>Raw_ComponentNo</DataField>
+        </Field>
+        <Field Name="Raw_Description">
+          <DataField>Raw_Description</DataField>
+        </Field>
+        <Field Name="Raw_UOM">
+          <DataField>Raw_UOM</DataField>
+        </Field>
+        <Field Name="Raw_QtyPer">
+          <DataField>Raw_QtyPer</DataField>
+        </Field>
+        <Field Name="Raw_QtyPerFormat">
+          <DataField>Raw_QtyPerFormat</DataField>
+        </Field>
+        <Field Name="Raw_TotalQty">
+          <DataField>Raw_TotalQty</DataField>
+        </Field>
+        <Field Name="Raw_TotalQtyFormat">
+          <DataField>Raw_TotalQtyFormat</DataField>
+        </Field>
+        <Field Name="Pkg_Level">
+          <DataField>Pkg_Level</DataField>
+        </Field>
+        <Field Name="Pkg_ComponentNo">
+          <DataField>Pkg_ComponentNo</DataField>
+        </Field>
+        <Field Name="Pkg_Description">
+          <DataField>Pkg_Description</DataField>
+        </Field>
+        <Field Name="Pkg_UOM">
+          <DataField>Pkg_UOM</DataField>
+        </Field>
+        <Field Name="Pkg_QtyPer">
+          <DataField>Pkg_QtyPer</DataField>
+        </Field>
+        <Field Name="Pkg_QtyPerFormat">
+          <DataField>Pkg_QtyPerFormat</DataField>
+        </Field>
+        <Field Name="Pkg_TotalQty">
+          <DataField>Pkg_TotalQty</DataField>
+        </Field>
+        <Field Name="Pkg_TotalQtyFormat">
+          <DataField>Pkg_TotalQtyFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

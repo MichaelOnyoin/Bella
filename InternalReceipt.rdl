@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="CompanyInfo_City">
+          <DataField>CompanyInfo_City</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address">
+          <DataField>CompanyInfo_Address</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Name">
+          <DataField>CompanyInfo_Name</DataField>
+        </Field>
+        <Field Name="Vat_Registration_No">
+          <DataField>Vat_Registration_No</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Phone_No">
+          <DataField>CompanyInfo_Phone_No</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Fax_No">
+          <DataField>CompanyInfo_Fax_No</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Post_Code">
+          <DataField>CompanyInfo_Post_Code</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Country_Region_Code">
+          <DataField>CompanyInfo_Country_Region_Code</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Home_Page">
+          <DataField>CompanyInfo_Home_Page</DataField>
+        </Field>
+        <Field Name="CompanyInfo_EMail">
+          <DataField>CompanyInfo_EMail</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Picture">
+          <DataField>CompanyInfo_Picture</DataField>
+        </Field>
+        <Field Name="AmountInWords">
+          <DataField>AmountInWords</DataField>
+        </Field>
+        <Field Name="Customer_Name">
+          <DataField>Customer_Name</DataField>
+        </Field>
+        <Field Name="BankSlipNo">
+          <DataField>BankSlipNo</DataField>
+        </Field>
+        <Field Name="BankSlipDate">
+          <DataField>BankSlipDate</DataField>
+        </Field>
+        <Field Name="CustomerBalance">
+          <DataField>CustomerBalance</DataField>
+        </Field>
+        <Field Name="CustomerBalanceFormat">
+          <DataField>CustomerBalanceFormat</DataField>
+        </Field>
+        <Field Name="CustomerTel">
+          <DataField>CustomerTel</DataField>
+        </Field>
+        <Field Name="BeingPaymentFor">
+          <DataField>BeingPaymentFor</DataField>
+        </Field>
+        <Field Name="ApproverID">
+          <DataField>ApproverID</DataField>
+        </Field>
+        <Field Name="ApprovalDate">
+          <DataField>ApprovalDate</DataField>
+        </Field>
+        <Field Name="PreparedBy">
+          <DataField>PreparedBy</DataField>
+        </Field>
+        <Field Name="PreparedDate">
+          <DataField>PreparedDate</DataField>
+        </Field>
+        <Field Name="GlobalDimension1Caption">
+          <DataField>GlobalDimension1Caption</DataField>
+        </Field>
+        <Field Name="TotalAmount">
+          <DataField>TotalAmount</DataField>
+        </Field>
+        <Field Name="TotalAmountFormat">
+          <DataField>TotalAmountFormat</DataField>
+        </Field>
+        <Field Name="CurrencyCode">
+          <DataField>CurrencyCode</DataField>
+        </Field>
+        <Field Name="Bank_Name">
+          <DataField>Bank_Name</DataField>
+        </Field>
+        <Field Name="DocumentType_SalesCommentLine">
+          <DataField>DocumentType_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="No_SalesCommentLine">
+          <DataField>No_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="LineNo_SalesCommentLine">
+          <DataField>LineNo_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="Date_SalesCommentLine">
+          <DataField>Date_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="Code_SalesCommentLine">
+          <DataField>Code_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="Comment_SalesCommentLine">
+          <DataField>Comment_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="DocumentLineNo_SalesCommentLine">
+          <DataField>DocumentLineNo_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="PostingDate_SalesCommentLine">
+          <DataField>PostingDate_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="DocumentDate_SalesCommentLine">
+          <DataField>DocumentDate_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="Bal__Account_No_SalesCommentLine">
+          <DataField>Bal__Account_No_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="ExternalDocNo_SalesCommentLine">
+          <DataField>ExternalDocNo_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="Requestedby_SalesCommentLine">
+          <DataField>Requestedby_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="Receivedby_SalesCommentLine">
+          <DataField>Receivedby_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="Reviewedby_SalesCommentLine">
+          <DataField>Reviewedby_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="Authorisedby_SalesCommentLine">
+          <DataField>Authorisedby_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="AccountType_SalesCommentLine">
+          <DataField>AccountType_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="AccountNo_SalesCommentLine">
+          <DataField>AccountNo_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="Description_SalesCommentLine">
+          <DataField>Description_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="Amount_SalesCommentLine">
+          <DataField>Amount_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="Amount_SalesCommentLineFormat">
+          <DataField>Amount_SalesCommentLineFormat</DataField>
+        </Field>
+        <Field Name="AmountLCY_SalesCommentLine">
+          <DataField>AmountLCY_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="AmountLCY_SalesCommentLineFormat">
+          <DataField>AmountLCY_SalesCommentLineFormat</DataField>
+        </Field>
+        <Field Name="BalAccountType_SalesCommentLine">
+          <DataField>BalAccountType_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="BalAccountNo_SalesCommentLine">
+          <DataField>BalAccountNo_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="ShortcutDimension1Code_SalesCommentLine">
+          <DataField>ShortcutDimension1Code_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="ShortcutDimension2Code_SalesCommentLine">
+          <DataField>ShortcutDimension2Code_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="JournalTemplateName_SalesCommentLine">
+          <DataField>JournalTemplateName_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="JournalBatchName_SalesCommentLine">
+          <DataField>JournalBatchName_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="CurrencyCode_SalesCommentLine">
+          <DataField>CurrencyCode_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="CurrencyFactor_SalesCommentLine">
+          <DataField>CurrencyFactor_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="CurrencyFactor_SalesCommentLineFormat">
+          <DataField>CurrencyFactor_SalesCommentLineFormat</DataField>
+        </Field>
+        <Field Name="Posted_SalesCommentLine">
+          <DataField>Posted_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="PaymentMethod_SalesCommentLine">
+          <DataField>PaymentMethod_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="User_SalesCommentLine">
+          <DataField>User_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="DimensionSetID_SalesCommentLine">
+          <DataField>DimensionSetID_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="Make_SalesCommentLine">
+          <DataField>Make_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="Center_SalesCommentLine">
+          <DataField>Center_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="Distance_SalesCommentLine">
+          <DataField>Distance_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="Distance_SalesCommentLineFormat">
+          <DataField>Distance_SalesCommentLineFormat</DataField>
+        </Field>
+        <Field Name="VoucherType_SalesCommentLine">
+          <DataField>VoucherType_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="FuelWorthLtrs_SalesCommentLine">
+          <DataField>FuelWorthLtrs_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="FuelWorhtLCY_SalesCommentLine">
+          <DataField>FuelWorhtLCY_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="FuelWorhtLCY_SalesCommentLineFormat">
+          <DataField>FuelWorhtLCY_SalesCommentLineFormat</DataField>
+        </Field>
+        <Field Name="MaintenanceWorthLCY_SalesCommentLine">
+          <DataField>MaintenanceWorthLCY_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="MaintenanceWorthLCY_SalesCommentLineFormat">
+          <DataField>MaintenanceWorthLCY_SalesCommentLineFormat</DataField>
+        </Field>
+        <Field Name="Used_SalesCommentLine">
+          <DataField>Used_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="Driver_SalesCommentLine">
+          <DataField>Driver_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="DateFilter_SalesCommentLine">
+          <DataField>DateFilter_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="VehicleNo_SalesCommentLine">
+          <DataField>VehicleNo_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="NoSeries_SalesCommentLine">
+          <DataField>NoSeries_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="BodyType_SalesCommentLine">
+          <DataField>BodyType_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="VehicleType_SalesCommentLine">
+          <DataField>VehicleType_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="DateCreate_SalesCommentLine">
+          <DataField>DateCreate_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="LastDateModified_SalesCommentLine">
+          <DataField>LastDateModified_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="CreatedBy_SalesCommentLine">
+          <DataField>CreatedBy_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="LastModifiedBy_SalesCommentLine">
+          <DataField>LastModifiedBy_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="Item_SalesCommentLine">
+          <DataField>Item_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="ItemDescription_SalesCommentLine">
+          <DataField>ItemDescription_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="UnitCost_SalesCommentLine">
+          <DataField>UnitCost_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="UnitCost_SalesCommentLineFormat">
+          <DataField>UnitCost_SalesCommentLineFormat</DataField>
+        </Field>
+        <Field Name="AvailableQuantity_SalesCommentLine">
+          <DataField>AvailableQuantity_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="AvailableQuantity_SalesCommentLineFormat">
+          <DataField>AvailableQuantity_SalesCommentLineFormat</DataField>
+        </Field>
+        <Field Name="UnitofMeasureCode_SalesCommentLine">
+          <DataField>UnitofMeasureCode_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="Branch_SalesCommentLine">
+          <DataField>Branch_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="Price_SalesCommentLine">
+          <DataField>Price_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="Price_SalesCommentLineFormat">
+          <DataField>Price_SalesCommentLineFormat</DataField>
+        </Field>
+        <Field Name="GlobalDimension1Filter_SalesCommentLine">
+          <DataField>GlobalDimension1Filter_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="GlobalDimension2Filter_SalesCommentLine">
+          <DataField>GlobalDimension2Filter_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="LocationFilter_SalesCommentLine">
+          <DataField>LocationFilter_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="BranchBank_SalesCommentLine">
+          <DataField>BranchBank_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="Approvedby_SalesCommentLine">
+          <DataField>Approvedby_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="Preparedby_SalesCommentLine">
+          <DataField>Preparedby_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="AppliedInvoices_SalesCommentLine">
+          <DataField>AppliedInvoices_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="ItemJournalTemplateName_SalesCommentLine">
+          <DataField>ItemJournalTemplateName_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="ItemJournalBatchName_SalesCommentLine">
+          <DataField>ItemJournalBatchName_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="ItemQuantity_SalesCommentLine">
+          <DataField>ItemQuantity_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="ItemQuantity_SalesCommentLineFormat">
+          <DataField>ItemQuantity_SalesCommentLineFormat</DataField>
+        </Field>
+        <Field Name="ToPost_SalesCommentLine">
+          <DataField>ToPost_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="CashOrCheque">
+          <DataField>CashOrCheque</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

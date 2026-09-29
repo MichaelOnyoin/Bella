@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="No_">
+          <DataField>No_</DataField>
+        </Field>
+        <Field Name="Description">
+          <DataField>Description</DataField>
+        </Field>
+        <Field Name="Inventory">
+          <DataField>Inventory</DataField>
+        </Field>
+        <Field Name="InventoryFormat">
+          <DataField>InventoryFormat</DataField>
+        </Field>
+        <Field Name="Qty__on_Prod__Order">
+          <DataField>Qty__on_Prod__Order</DataField>
+        </Field>
+        <Field Name="Qty__on_Prod__OrderFormat">
+          <DataField>Qty__on_Prod__OrderFormat</DataField>
+        </Field>
+        <Field Name="Qty__on_Purch__Order">
+          <DataField>Qty__on_Purch__Order</DataField>
+        </Field>
+        <Field Name="Qty__on_Purch__OrderFormat">
+          <DataField>Qty__on_Purch__OrderFormat</DataField>
+        </Field>
+        <Field Name="Qty__on_Component_Lines">
+          <DataField>Qty__on_Component_Lines</DataField>
+        </Field>
+        <Field Name="Qty__on_Component_LinesFormat">
+          <DataField>Qty__on_Component_LinesFormat</DataField>
+        </Field>
+        <Field Name="Qty__on_Sales_Order">
+          <DataField>Qty__on_Sales_Order</DataField>
+        </Field>
+        <Field Name="Qty__on_Sales_OrderFormat">
+          <DataField>Qty__on_Sales_OrderFormat</DataField>
+        </Field>
+        <Field Name="Qty__on_Service_Order">
+          <DataField>Qty__on_Service_Order</DataField>
+        </Field>
+        <Field Name="Qty__on_Service_OrderFormat">
+          <DataField>Qty__on_Service_OrderFormat</DataField>
+        </Field>
+        <Field Name="Qty__on_Job_Order">
+          <DataField>Qty__on_Job_Order</DataField>
+        </Field>
+        <Field Name="Qty__on_Job_OrderFormat">
+          <DataField>Qty__on_Job_OrderFormat</DataField>
+        </Field>
+        <Field Name="Qty__on_Assembly_Order">
+          <DataField>Qty__on_Assembly_Order</DataField>
+        </Field>
+        <Field Name="Qty__on_Assembly_OrderFormat">
+          <DataField>Qty__on_Assembly_OrderFormat</DataField>
+        </Field>
+        <Field Name="Qty__on_Asm__Component">
+          <DataField>Qty__on_Asm__Component</DataField>
+        </Field>
+        <Field Name="Qty__on_Asm__ComponentFormat">
+          <DataField>Qty__on_Asm__ComponentFormat</DataField>
+        </Field>
+        <Field Name="Qty__on_Sales_Return">
+          <DataField>Qty__on_Sales_Return</DataField>
+        </Field>
+        <Field Name="Qty__on_Sales_ReturnFormat">
+          <DataField>Qty__on_Sales_ReturnFormat</DataField>
+        </Field>
+        <Field Name="TotalAllocatedQty">
+          <DataField>TotalAllocatedQty</DataField>
+        </Field>
+        <Field Name="TotalAllocatedQtyFormat">
+          <DataField>TotalAllocatedQtyFormat</DataField>
+        </Field>
+        <Field Name="RemainingQty">
+          <DataField>RemainingQty</DataField>
+        </Field>
+        <Field Name="RemainingQtyFormat">
+          <DataField>RemainingQtyFormat</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address">
+          <DataField>CompanyInfo_Address</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address_2">
+          <DataField>CompanyInfo_Address_2</DataField>
+        </Field>
+        <Field Name="CompanyInfo_City">
+          <DataField>CompanyInfo_City</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Phone_No_">
+          <DataField>CompanyInfo_Phone_No_</DataField>
+        </Field>
+        <Field Name="CompanyInfo_E_Mail">
+          <DataField>CompanyInfo_E_Mail</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Home_Page">
+          <DataField>CompanyInfo_Home_Page</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Picture">
+          <DataField>CompanyInfo_Picture</DataField>
+        </Field>
+        <Field Name="companyInfo">
+          <DataField>companyInfo</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>
